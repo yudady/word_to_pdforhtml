@@ -11,44 +11,61 @@
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
 		<fr.opensagres.xdocreport.version>1.0.4</fr.opensagres.xdocreport.version>
+		<org.apache.poi.version>3.11</org.apache.poi.version>
 	</properties>
 
 
 
 	<dependencies>
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
-			<version>3.8</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-ooxml</artifactId>
-			<version>3.8</version>
-		</dependency>
+
+
+<!-- Document Dependency -->
 		<dependency>
 			<groupId>fr.opensagres.xdocreport</groupId>
-			<artifactId>fr.opensagres.xdocreport.itext.extension</artifactId>
+			<artifactId>fr.opensagres.xdocreport.document.docx</artifactId>
 			<version>${fr.opensagres.xdocreport.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>fr.opensagres.xdocreport</groupId>
-			<artifactId>org.apache.poi.xwpf.converter.core</artifactId>
+			<artifactId>fr.opensagres.xdocreport.document.pptx</artifactId>
 			<version>${fr.opensagres.xdocreport.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>fr.opensagres.xdocreport</groupId>
-			<artifactId>org.apache.poi.xwpf.converter.pdf</artifactId>
-			<version>${fr.opensagres.xdocreport.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>fr.opensagres.xdocreport</groupId>
-			<artifactId>org.apache.poi.xwpf.converter.xhtml</artifactId>
+			<artifactId>fr.opensagres.xdocreport.document.odt</artifactId>
 			<version>${fr.opensagres.xdocreport.version}</version>
 		</dependency>
 
 
 
+<!-- Template Dependency -->
+		<dependency>
+			<groupId>fr.opensagres.xdocreport</groupId>
+			<artifactId>fr.opensagres.xdocreport.template.freemarker</artifactId>
+			<version>${fr.opensagres.xdocreport.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>fr.opensagres.xdocreport</groupId>
+			<artifactId>fr.opensagres.xdocreport.template.velocity</artifactId>
+			<version>${fr.opensagres.xdocreport.version}</version>
+		</dependency>
+
+
+
+
+<!-- Converter Dependency -->
+		<!-- If you wish convert docx 2 PDF/XHTML : -->
+		<dependency>
+			<groupId>fr.opensagres.xdocreport</groupId>
+			<artifactId>fr.opensagres.xdocreport.converter.docx.xwpf</artifactId>
+			<version>${fr.opensagres.xdocreport.version}</version>
+		</dependency>
+		<!-- If you wish convert odt 2 PDF/XHTML : -->
+		<dependency>
+			<groupId>fr.opensagres.xdocreport</groupId>
+			<artifactId>fr.opensagres.xdocreport.converter.odt.odfdom</artifactId>
+			<version>${fr.opensagres.xdocreport.version}</version>
+		</dependency>
 
 
 
@@ -60,8 +77,7 @@
 			<resource>
 				<directory>src/main/java</directory>
 				<includes>
-					<include>**/*.properties</include>
-					<include>**/*.docx</include>
+					<include>**/*.*</include>
 				</includes>
 				<filtering>false</filtering>
 			</resource>

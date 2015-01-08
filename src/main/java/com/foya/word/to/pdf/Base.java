@@ -21,7 +21,7 @@ public class Base {
 	private static void createPDF() {
 		try {
 
-			String path = HelloWorldToPDF.class.getClassLoader()
+			String path = Base.class.getClassLoader()
 					.getResource(".").getPath();
 			System.out.println(path);
 			String outputPath = new File(".").getAbsolutePath();
