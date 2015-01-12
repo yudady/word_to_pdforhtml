@@ -17,9 +17,28 @@
 
 
 	<dependencies>
+		<!-- poi -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${org.apache.poi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${org.apache.poi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-examples</artifactId>
+			<version>${org.apache.poi.version}</version>
+		</dependency>
 
 
-<!-- Document Dependency -->
+
+
+
+		<!-- Document Dependency -->
 		<dependency>
 			<groupId>fr.opensagres.xdocreport</groupId>
 			<artifactId>fr.opensagres.xdocreport.document.docx</artifactId>
@@ -38,7 +57,7 @@
 
 
 
-<!-- Template Dependency -->
+		<!-- Template Dependency -->
 		<dependency>
 			<groupId>fr.opensagres.xdocreport</groupId>
 			<artifactId>fr.opensagres.xdocreport.template.freemarker</artifactId>
@@ -53,7 +72,7 @@
 
 
 
-<!-- Converter Dependency -->
+		<!-- Converter Dependency -->
 		<!-- If you wish convert docx 2 PDF/XHTML : -->
 		<dependency>
 			<groupId>fr.opensagres.xdocreport</groupId>
